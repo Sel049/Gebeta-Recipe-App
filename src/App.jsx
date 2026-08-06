@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import HeroSection from './components/HeroSection'
+import Catagories from './components/Catagories'
 
 const name = 'customers'
 
@@ -8,58 +9,11 @@ const App = () => {
   return (
   <>
   <div className="min-h-screen text-charcoal antialiased">
-    <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 lg:px-10">
-      
+    <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 lg:px-10">   
     <NavBar/>
     <HeroSection/>
-
-      <section className="mt-10">
-        <div className="mb-6 flex items-center justify-between">
-          <h2 className="font-display text-3xl font-bold">Popular Categories</h2>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-orange/10 text-2xl">🍳</div>
-            <span className="text-sm font-semibold">Breakfast</span>
-          </div>
-
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-amber/20 text-2xl">🥗</div>
-            <span className="text-sm font-semibold">Lunch</span>
-          </div>
-
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-mint/20 text-2xl">🍽️</div>
-            <span className="text-sm font-semibold">Dinner</span>
-          </div>
-
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-orange/20 text-2xl">🍰</div>
-            <span className="text-sm font-semibold">Dessert</span>
-          </div>
-
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-2xl">🦐</div>
-            <span className="text-sm font-semibold">Seafood</span>
-          </div>
-
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-2xl">🥬</div>
-            <span className="text-sm font-semibold">Vegetarian</span>
-          </div>
-
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-amber/40 text-2xl">🥤</div>
-            <span className="text-sm font-semibold">Drinks</span>
-          </div>
-
-          <div className="group flex flex-col items-center rounded-[24px] border border-white/60 bg-white/55 px-4 py-5 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-105">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-orange/10 text-2xl">🥨</div>
-            <span className="text-sm font-semibold">Snacks</span>
-          </div>
-        </div>
-      </section>
+    <Catagories/>
+      
 
       <section className="mt-12">
         <div className="mb-6 flex items-center justify-between">
