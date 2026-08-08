@@ -12,6 +12,9 @@
 }
 
 body {
+    font-size: 17px;
+    line-height: 1.6;
+    font-family: var(--font-sans);
     background:
       radial-gradient(circle at top left, rgba(255, 209, 102, 0.35), transparent 20%),
       radial-gradient(circle at top right, rgba(46, 196, 182, 0.18), transparent 25%),
@@ -22,6 +25,10 @@ body {
     background: rgba(255, 255, 255, 0.54);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
   }
 
   .hero-image {

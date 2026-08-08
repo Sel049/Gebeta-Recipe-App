@@ -9,7 +9,7 @@ const name = 'customers'
 const App = () => {
   return (
   <>
-  <div className="min-h-screen text-charcoal antialiased">
+  <div className="min-h-screen text-charcoal antialiased font-sans">
     <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 lg:px-10">   
     <NavBar/>
     <HeroSection/>
