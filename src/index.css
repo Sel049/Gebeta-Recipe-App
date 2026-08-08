@@ -9,6 +9,8 @@
     --color-amber: #ffd166;
     --color-mint: #2ec4b6;
     --color-charcoal: #2b2d42;
+
+    --shadow-glass: 0 10px 30px rgba(43, 45, 66, 0.12);
 }
 
 body {
