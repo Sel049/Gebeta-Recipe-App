@@ -1,21 +1,21 @@
 import React from 'react'
 
-const HeroSection = () => {
+const HeroSection = ({title="Discover Recipes You'll Love.",subtitle_1="Curated food experiences",subtitle_2="Explore gourmet dishes, handpicked favorites, and beautifully simple recipes made for every mood."}) => {
   return (
     <section className="hero-image relative overflow-hidden rounded-[32px] px-6 py-10 text-white shadow-glass md:px-12 md:py-16">
         <div className="absolute inset-0 bg-gradient-to-r from-orange/30 via-transparent to-mint/20"></div>
 
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <p className="mb-4 inline-flex rounded-full bg-white/15 px-4 py-1 text-xs font-semibold tracking-[0.22em] uppercase backdrop-blur-md">
-            Curated food experiences
+            {subtitle_1}
           </p>
 
           <h1 className="font-display text-4xl font-bold md:text-6xl">
-            Discover Recipes You'll Love.
+            {title}
           </h1>
 
           <p className="mx-auto mt-4 max-w-2xl text-sm text-white/85 md:text-base">
-            Explore gourmet dishes, handpicked favorites, and beautifully simple recipes made for every mood.
+            {subtitle_2}
           </p>
 
           <div className="mx-auto mt-8 flex max-w-2xl items-center overflow-hidden rounded-full bg-white/95 shadow-lg">
