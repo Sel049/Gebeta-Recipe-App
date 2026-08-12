@@ -1,42 +1,68 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 @theme {
-    --font-sans:"Inter",sans-serif;
-    --font-display:"Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Playfair Display", serif;
 
-    --color-cream: #fff8f0;
-    --color-orange: #ff6b35;
-    --color-amber: #ffd166;
-    --color-mint: #2ec4b6;
-    --color-charcoal: #2b2d42;
-
-    --shadow-glass: 0 10px 30px rgba(43, 45, 66, 0.12);
+  --color-cream: #fff8f0;
+  --color-orange: #ff6b35;
+  --color-amber: #ffd166;
+  --color-mint: #2ec4b6;
+  --color-charcoal: #2b2d42;
+  --shadow-glass: 0 10px 30px rgba(43, 45, 66, 0.12);
 }
 
 body {
-    font-size: 17px;
-    line-height: 1.6;
-    font-family: var(--font-sans);
-    background:
-      radial-gradient(circle at top left, rgba(255, 209, 102, 0.35), transparent 20%),
-      radial-gradient(circle at top right, rgba(46, 196, 182, 0.18), transparent 25%),
-      #fff8f0;
-  }
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at top left, rgba(255, 209, 102, 0.35), transparent 20%),
+    radial-gradient(circle at top right, rgba(46, 196, 182, 0.18), transparent 25%),
+    #fff8f0;
+}
 
-  .glass {
-    background: rgba(255, 255, 255, 0.54);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-  }
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+}
 
-  h1, h2, h3, .font-display {
-    font-family: var(--font-display);
-  }
+.glass {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
 
-  .hero-image {
-    background-image:
-      linear-gradient(to bottom, rgba(43, 45, 66, 0.1), rgba(43, 45, 66, 0.55)),
-      url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
-    background-size: cover;
-    background-position: center;
-  }
+.hero-image {
+  background-image:
+    linear-gradient(to bottom, rgba(43, 45, 66, 0.16), rgba(43, 45, 66, 0.55)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.text-charcoal {
+  color: var(--color-charcoal);
+}
+
+.bg-orange {
+  background-color: var(--color-orange);
+}
+
+.bg-amber {
+  background-color: var(--color-amber);
+}
+
+.bg-mint {
+  background-color: var(--color-mint);
+}
+
+.shadow-glass {
+  box-shadow: var(--shadow-glass);
+}
