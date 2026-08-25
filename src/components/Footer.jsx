@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
 
         <h2 className="font-display text-2xl font-bold">
-          ገበታ
+        Recipe Finder
         </h2>
 
       </div>

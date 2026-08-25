@@ -7,8 +7,8 @@ function NavBar() {
         className="glass sticky top-4 z-20 mb-8 flex items-center justify-between rounded-full border border-white/60 px-4 py-3 shadow-glass"
       >
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange text-lg font-bold text-white">
-            R
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange ">
+          🍽️
           </div>
           <div>
             <div className="font-display text-xl font-bold">Recipe Finder</div>
