@@ -37,7 +37,7 @@ const ExploreCuisines = () => {
         <div className="group relative h-52 overflow-hidden rounded-[28px] cursor-pointer">
 
           <img
-            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80"
+            src="https://images.unsplash.com/photo-1577223220266-f3edaed48f68?q=80"
             alt="Ethiopian cuisine"
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
           />
