@@ -4,12 +4,12 @@ import RecipeCard from './RecipeCard'
 const recipes = [
   {
     image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80',
-    category: 'Italian',
-    time: '45 min',
-    title: 'Truffle Pasta',
-    description: 'Creamy truffle comfort with roasted parmesan and basil.',
-    rating: '4.9',
-    difficulty: 'Easy',
+    category: 'Ethiopian Cuisine',
+    time: '60 min',
+    title: 'Doro Wat',
+    description: 'A rich Ethiopian chicken stew prepared with berbere, onions, spices, and traditional Ethiopian butter.',
+    rating: '4.8',
+    difficulty: 'Medium',
   },
   {
     image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
