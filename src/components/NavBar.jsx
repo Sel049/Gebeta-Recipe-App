@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
   return (
@@ -16,7 +17,7 @@ function NavBar() {
         </div>
 
         <nav className="hidden items-center gap-7 md:flex">
-          <a href="/" className="text-sm font-semibold text-charcoal/80">Home</a>
+          <link to="/" className="text-sm font-semibold text-charcoal/80">Home</link>
           <a href="#" className="text-sm font-semibold text-charcoal/80">Categories</a>
           <a href="#" className="text-sm font-semibold text-charcoal/80">Favorites</a>
           <a href="#" className="text-sm font-semibold text-charcoal/80">Random Recipe</a>
