@@ -19,8 +19,8 @@ function NavBar() {
         </div>
 
         <nav className="hidden items-center gap-7 md:flex">
-          <link to="/" className="text-sm font-semibold text-charcoal/80">Home</link>
-          <link to ="/Catagories" className="text-sm font-semibold text-charcoal/80">Categories</link>
+          <a href="/" className="text-sm font-semibold text-charcoal/80">Home</a>
+          <a href ="/Catagories" className="text-sm font-semibold text-charcoal/80">Categories</a>
           <a href="#" className="text-sm font-semibold text-charcoal/80">Favorites</a>
           <a href="#" className="text-sm font-semibold text-charcoal/80">Random Recipe</a>
         </nav>
