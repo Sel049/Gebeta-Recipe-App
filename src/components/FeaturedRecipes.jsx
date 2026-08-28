@@ -3,11 +3,11 @@ import RecipeCard from './RecipeCard'
 
 const recipes = [
   {
-    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80',
+    image: 'https://static.vecteezy.com/system/resources/previews/075/322/205/large_2x/vibrant-and-flavorful-ethiopian-doro-wat-spicy-chicken-stew-with-injera-bread-free-photo.jpg',
     category: 'Ethiopian Cuisine',
     time: '60 min',
     title: 'Doro Wat',
-    description: 'A rich Ethiopian chicken stew prepared with berbere, onions, spices, and traditional Ethiopian butter.',
+    description: 'A rich Ethiopian chicken stew prepared with berbere, onions and spices.',
     rating: '4.8',
     difficulty: 'Medium',
   },
