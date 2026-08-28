@@ -1,12 +1,19 @@
-import React from 'react'
-import NavBar from './components/NavBar'
-import HeroSection from './components/HeroSection'
-import Catagories from './components/Catagories'
-import FeaturedRecipes from './components/FeaturedRecipes'
-import ExploreCuisines from './components/ExploreCuisines'
-import Footer from './components/Footer'
+import {
+  Router,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider, 
+  Route
+} from 'react-router-dom'
+import MainLayout from './layouts/MainLayout'
+import HomePage from './pages/HomePage'
 
-const name = 'customers'
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route path='/' element={<MainLayout/>}> 
+      <Route index element ={<HomePage/>}/>
+  </Route>)
+)
 
 const App = () => {
   return (
@@ -14,16 +21,7 @@ const App = () => {
   <div className="min-h-screen bg-cream text-charcoal antialiased font-sans">
     <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 lg:px-10">  
     
-    <NavBar/>
-    
-    <main>
-      <HeroSection/>
-      <Catagories/>
-      <FeaturedRecipes/>
-      <ExploreCuisines/>  
-    </main>
-
-    <Footer/>
+    <RouterProvider router={router}/>
 
     </div>
   </div>
