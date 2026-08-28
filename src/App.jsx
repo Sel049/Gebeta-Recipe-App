@@ -7,13 +7,17 @@ import {
 } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
+import Favorites from './pages/Favorites'
+import Catagories from './components/Catagories'
+import RandomRecipe from './pages/RandomRecipe'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path='/' element={<MainLayout/>}> 
       <Route index element ={<HomePage/>}/>
-      <Route path='/catagories' element = {<h1>catagories test</h1>}/>
-      <Route path='/randomrecipe' element = {<h1>randomrecipe test</h1>}/>
+      <Route path='/catagories' element = {<Catagories/>}/>
+      <Route path='/randomrecipe' element = {<RandomRecipe/>}/>
+      <Route path='/Favorites' element = {<Favorites/>}/>
   </Route>)
 )
 
