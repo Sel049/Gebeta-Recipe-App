@@ -6,7 +6,7 @@ export const recipeDetails = [
     description:
       'A rich Ethiopian chicken stew prepared with berbere, onions and spices.',
     image:
-      'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZu5OJzkJHcWPWLSlyPKbAvPimn6uOkz5nWHcYc0PMA&s=10',
     rating: '4.8',
     totalTime: '60 min',
     difficulty: 'Medium',

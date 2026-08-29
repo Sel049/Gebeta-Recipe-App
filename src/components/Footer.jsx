@@ -77,7 +77,7 @@ const Footer = () => {
     <div>
 
       <h3 className="font-semibold">
-        Gebeta
+      Recipe Finder
       </h3>
 
       <div className="mt-4 space-y-3 text-sm text-charcoal/60">
