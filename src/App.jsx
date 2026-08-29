@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import Favorites from './pages/Favorites'
 import Catagories from './components/Catagories'
 import RandomRecipe from './pages/RandomRecipe'
+import RecipeDetails from './pages/RecipeDetails'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
               <Route path='/catagories' element = {<Catagories/>}/>
               <Route path='/randomrecipe' element = {<RandomRecipe/ >}/>
               <Route path='/Favorites' element = {<Favorites/>}/>
+              <Route path="/recipe/:id" element={<RecipeDetails />}/>
           </Route>
         </Routes>
       </div>

@@ -1,8 +1,8 @@
 import React,{ useState }  from 'react'
 
 
-const RecipeHero = () => {
-    const [isSaved, setIsSaved] = useState(false)
+const RecipeHero = ({recipe}) => {
+    
   return (
     <section className="mx-auto max-w-7xl px-6 py-10">
       <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -13,14 +13,6 @@ const RecipeHero = () => {
             className="h-[520px] w-full rounded-[32px] object-cover shadow-xl"
           />
 
-          <button
-            type="button"
-            onClick={() => setIsSaved(!isSaved)}
-            className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-xl shadow-lg transition hover:scale-110"
-            aria-label={isSaved ? 'Remove from favorites' : 'Save recipe'}
-          >
-            {isSaved ? '♥' : '♡'}
-          </button>
         </div>
 
         <div>
@@ -52,7 +44,7 @@ const RecipeHero = () => {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex justify-center ">
             <button
               type="button"
               className="rounded-2xl bg-orange px-7 py-4 font-semibold text-white shadow-lg shadow-orange/20 transition hover:scale-105"
@@ -60,13 +52,6 @@ const RecipeHero = () => {
               Start Cooking →
             </button>
 
-            <button
-              type="button"
-              onClick={() => setIsSaved(!isSaved)}
-              className="rounded-2xl bg-white px-7 py-4 font-semibold shadow-sm transition hover:shadow-md"
-            >
-              {isSaved ? '♥ Saved Recipe' : '♡ Save Recipe'}
-            </button>
           </div>
         </div>
       </div>

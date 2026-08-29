@@ -1,16 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const RecipeCard = ({ image, category, time, title, description, rating, difficulty }) => {
+const RecipeCard = ({
+  id,
+  image,
+  category,
+  time,
+  title,
+  description,
+  rating,
+  difficulty,
+}) => {
   return (
     <article className="group overflow-hidden rounded-[28px] border border-white/60 bg-white/55 shadow-glass transition duration-300 hover:-translate-y-2 hover:scale-[1.01]">
       <div className="relative">
         <img src={image} alt={title} className="h-64 w-full object-cover" />
-        
       </div>
 
-      <div className="p-5">
+      <div className="flex flex-col p-5">
         <div className="mb-3 flex items-center justify-between">
-          <span className="rounded-full bg-orange/10 px-3 py-1 text-xs font-semibold text-orange">{category}</span>
+          <span className="rounded-full bg-orange/10 px-3 py-1 text-xs font-semibold text-orange">
+            {category}
+          </span>
           <span className="text-sm text-charcoal/60">{time}</span>
         </div>
 
@@ -22,9 +33,12 @@ const RecipeCard = ({ image, category, time, title, description, rating, difficu
           <span>{difficulty}</span>
         </div>
 
-        <button className="mt-5 w-full rounded-full bg-charcoal px-4 py-3 text-sm font-semibold text-white">
+        <Link
+          to={`/recipe/${id}`}
+          className="mt-6 block w-full rounded-full bg-charcoal px-4 py-3 text-center text-sm font-semibold text-white"
+        >
           View Recipe
-        </button>
+        </Link>
       </div>
     </article>
   )
