@@ -5,7 +5,7 @@ const RecipeCard = ({ image, category, time, title, description, rating, difficu
     <article className="group overflow-hidden rounded-[28px] border border-white/60 bg-white/55 shadow-glass transition duration-300 hover:-translate-y-2 hover:scale-[1.01]">
       <div className="relative">
         <img src={image} alt={title} className="h-64 w-full object-cover" />
-        <button className="absolute right-4 top-4 rounded-full bg-white/90 p-2 text-orange">❤</button>
+        
       </div>
 
       <div className="p-5">
