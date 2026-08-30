@@ -1,10 +1,9 @@
 import {Routes, Route,BrowserRouter} from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
-import Favorites from './pages/Favorites'
-import Catagories from './components/Catagories'
 import RandomRecipe from './pages/RandomRecipe'
 import RecipeDetails from './pages/RecipeDetails'
+import CategoriesPage from './pages/CategoriesPage'
 
 
 const App = () => {
@@ -16,9 +15,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<MainLayout/>}>
               <Route index element ={<HomePage/>}/>
-              <Route path='/catagories' element = {<Catagories/>}/>
+              <Route path='/categories' element={<CategoriesPage/>}/>
               <Route path='/randomrecipe' element = {<RandomRecipe/ >}/>
-              <Route path='/Favorites' element = {<Favorites/>}/>
               <Route path="/recipe/:id" element={<RecipeDetails />}/>
           </Route>
         </Routes>

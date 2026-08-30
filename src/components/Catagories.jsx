@@ -38,7 +38,7 @@ const categories = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1571865402713-98ba5a56f12b?w=500&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1701341404788-b85484ca379e?w=500&auto=format&fit=crop&q=60',
     label: 'Snacks',
   },
 ]

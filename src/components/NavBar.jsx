@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Catagories from './Catagories'
-import Favorites from '../pages/Favorites'
+import CategoriesPage from '../pages/CategoriesPage'
 import RandomRecipe from '../pages/RandomRecipe'
 
 function NavBar() {
@@ -27,8 +26,7 @@ function NavBar() {
 
         <nav className="hidden items-center gap-7 md:flex">
           <NavLink to="/" className={navItemClass}>Home</NavLink>
-          <NavLink to ="/Catagories" className={navItemClass}>Categories</NavLink>
-          <NavLink to="/Favorites" className={navItemClass}>Favorites</NavLink>
+          <NavLink to ="/categories" className={navItemClass}>Categories</NavLink>
           <NavLink to="/RandomRecipe" className={navItemClass}>Random Recipe</NavLink>
         </nav>
 

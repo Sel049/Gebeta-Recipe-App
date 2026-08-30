@@ -19,32 +19,6 @@ const IngredientsList = ({ ingredients, initialServings }) => {
         Everything you need for this recipe.
       </p>
 
-      <div className="mt-7 flex items-center justify-between rounded-2xl bg-white p-4">
-        <span className="font-semibold">Servings</span>
-
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={decreaseServings}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100"
-            aria-label="Decrease servings"
-          >
-            −
-          </button>
-
-          <span className="font-semibold">{servings}</span>
-
-          <button
-            type="button"
-            onClick={increaseServings}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100"
-            aria-label="Increase servings"
-          >
-            +
-          </button>
-        </div>
-      </div>
-
       <div className="mt-5 space-y-3">
         {ingredients.map((ingredient) => (
           <label
@@ -59,13 +33,6 @@ const IngredientsList = ({ ingredients, initialServings }) => {
           </label>
         ))}
       </div>
-
-      <button
-        type="button"
-        className="mt-5 w-full rounded-2xl bg-charcoal py-4 font-semibold text-white"
-      >
-        + Add to Shopping List
-      </button>
     </div>
   )
 }
