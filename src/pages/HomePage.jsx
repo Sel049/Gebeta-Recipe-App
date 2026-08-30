@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
     <HeroSection/>
     <Catagories/>
-    <FeaturedRecipes/>
+    <FeaturedRecipes isHome/>
     <ExploreCuisines/>
     </>
   )
