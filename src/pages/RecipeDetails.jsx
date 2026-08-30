@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import { useParams,useNavigate } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 
@@ -8,17 +8,71 @@ import IngredientsList from '../components/IngredientsList'
 import CookingSteps from '../components/CookingSteps'
 import Nutrition from '../components/Nutrition'
 import ChefTip from '../components/ChefTip'
-import { recipeDetails} from '../data/recipes'
+
 
 const RecipeDetails = () => {
   const { id } = useParams()
   const navigate = useNavigate()
 
-  const recipe = recipeDetails.find((item) => item.id === id)
+  const [recipe, setRecipe] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    const fetchRecipe = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch(`https://dummyjson.com/recipes/${id}`)
+
+        if (!response.ok) {
+          throw new Error('Recipe not found')
+        }
+
+        const data = await response.json()
+        setRecipe(data)
+      } catch (err) {
+        setError('Unable to load recipe details.')
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    if (id) {
+      fetchRecipe()
+    }
+  }, [id])
+
+  if (loading) {
+    return (
+      <div className="mx-auto max-w-7xl px-6 py-12">
+        <div className="animate-pulse rounded-[32px] bg-white/60 p-6 shadow-glass">
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div className="h-[520px] rounded-[32px] bg-slate-200" />
+            <div className="space-y-4">
+              <div className="h-8 w-28 rounded-full bg-slate-200" />
+              <div className="h-12 w-3/4 rounded bg-slate-200" />
+              <div className="h-5 w-full rounded bg-slate-200" />
+              <div className="h-5 w-5/6 rounded bg-slate-200" />
+              <div className="flex gap-3">
+                <div className="h-14 w-28 rounded-2xl bg-slate-200" />
+                <div className="h-14 w-28 rounded-2xl bg-slate-200" />
+                <div className="h-14 w-28 rounded-2xl bg-slate-200" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return <p className="text-center text-lg text-red-500">{error}</p>
+  }
 
   if (!recipe) {
-    return <div className="p-10 text-center">Recipe not found</div>
+    return <p className="text-center text-lg">Recipe not found.</p>
   }
+
 
   return (
     <div className="min-h-screen bg-cream text-charcoal">
@@ -42,12 +96,12 @@ const RecipeDetails = () => {
               initialServings={recipe.servings}
             />
 
-            <CookingSteps steps={recipe.steps} />
+            <CookingSteps steps={recipe.instructions} />
           </div>
         </section>
 
         <Nutrition nutrition={recipe.nutrition} />
-        <ChefTip tip={recipe.chefTip} />
+        {recipe.chefTip ? <ChefTip tip={recipe.chefTip} />: null}
       </main>
     </div>
   )

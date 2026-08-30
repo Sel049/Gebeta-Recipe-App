@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CookingSteps = ({ steps }) => {
+const CookingSteps = ({ steps= [] }) => {
   return (
     <div className="lg:col-span-2">
       <h2 className="font-display text-3xl font-bold">How to Cook</h2>
@@ -18,11 +18,11 @@ const CookingSteps = ({ steps }) => {
 
             <div>
               <h3 className="font-display text-xl font-bold">
-                {step.title}
+              Step {index + 1}
               </h3>
 
               <p className="mt-2 leading-relaxed text-gray-600">
-                {step.description}
+                {step}
               </p>
             </div>
           </div>

@@ -2,10 +2,22 @@ import React from 'react'
 
 const RecipeStats = ({ recipe }) => {
   const stats = [
-    { label: 'Prep Time', value: recipe.prepTime },
-    { label: 'Cook Time', value: recipe.cookTime },
-    { label: 'Servings', value: `${recipe.servings} people` },
-    { label: 'Difficulty', value: recipe.difficulty },
+    {
+      label: 'Prep Time',
+      value: `${recipe.prepTimeMinutes ?? recipe.prepTime ?? 0} min`,
+    },
+    {
+      label: 'Cook Time',
+      value: `${recipe.cookTimeMinutes ?? recipe.cookTime ?? 0} min`,
+    },
+    {
+      label: 'Servings',
+      value: `${recipe.servings ?? 0} people`,
+    },
+    {
+      label: 'Difficulty',
+      value: recipe.difficulty,
+    },
   ]
 
   return (

@@ -2,6 +2,14 @@ import React,{ useState }  from 'react'
 
 
 const RecipeHero = ({recipe}) => {
+  const title = recipe.name || recipe.title
+  const category = recipe.cuisine || recipe.category ||'Popular'
+  const description =recipe.description ||recipe.summary ||
+  'A delicious recipe worth trying.'
+
+  const totalTime =
+    recipe.totalTime ||
+    `${(recipe.prepTimeMinutes ?? 0) + (recipe.cookTimeMinutes ?? 0)} min`
     
   return (
     <section className="mx-auto max-w-7xl px-6 py-10">
@@ -17,15 +25,15 @@ const RecipeHero = ({recipe}) => {
 
         <div>
           <span className="inline-flex rounded-full bg-orange/10 px-4 py-2 text-sm font-semibold text-orange">
-            {recipe.category}
+            {category}
           </span>
 
           <h1 className="mt-5 font-display text-5xl font-bold leading-tight md:text-6xl">
-            {recipe.title}
+            {title}
           </h1>
 
           <p className="mt-5 text-lg leading-relaxed text-gray-600">
-            {recipe.description}
+            {description}
           </p>
 
           <div className="mt-7 flex flex-wrap gap-4">
@@ -36,7 +44,7 @@ const RecipeHero = ({recipe}) => {
             </div>
 
             <div className="rounded-2xl bg-white px-5 py-3 shadow-sm">
-              🕒 <span className="font-semibold">{recipe.totalTime}</span>
+              🕒 <span className="font-semibold">{totalTime}</span>
             </div>
 
             <div className="rounded-2xl bg-white px-5 py-3 shadow-sm">

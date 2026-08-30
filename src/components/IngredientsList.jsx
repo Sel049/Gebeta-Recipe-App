@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const IngredientsList = ({ ingredients, initialServings }) => {
+const IngredientsList = ({ ingredients = [], initialServings = 1 }) => {
   const [servings, setServings] = useState(initialServings)
 
   const decreaseServings = () => {
@@ -20,16 +20,14 @@ const IngredientsList = ({ ingredients, initialServings }) => {
       </p>
 
       <div className="mt-5 space-y-3">
-        {ingredients.map((ingredient) => (
+        {ingredients.map((ingredient, index) => (
           <label
-            key={`${ingredient.amount}-${ingredient.name}`}
+            key={`${ingredient}-${index}`}
             className="flex cursor-pointer items-center gap-4 rounded-2xl bg-white p-4 transition hover:shadow-sm"
           >
             <input type="checkbox" className="h-5 w-5 accent-orange" />
 
-            <span>
-              <strong>{ingredient.amount}</strong> {ingredient.name}
-            </span>
+            <span>{ingredient}</span>
           </label>
         ))}
       </div>

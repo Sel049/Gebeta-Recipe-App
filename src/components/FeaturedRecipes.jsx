@@ -32,7 +32,31 @@ const FeaturedRecipes = ({isHome}) => {
   }, [isHome])
 
   if (loading) {
-    return <p className="text-center text-lg">Loading recipes...</p>
+    return (
+      <section className="mt-12">
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="font-display text-3xl font-bold">Featured Recipes</h2>
+        </div>
+  
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {[1, 2, 3].map((item) => (
+            <div
+              key={item}
+              className="animate-pulse overflow-hidden rounded-[28px] border border-white/60 bg-white/55 shadow-glass"
+            >
+              <div className="h-64 w-full bg-slate-200" />
+              <div className="space-y-3 p-5">
+                <div className="h-4 w-20 rounded-full bg-slate-200" />
+                <div className="h-7 w-2/3 rounded bg-slate-200" />
+                <div className="h-4 w-full rounded bg-slate-200" />
+                <div className="h-4 w-5/6 rounded bg-slate-200" />
+                <div className="h-10 w-full rounded-full bg-slate-200" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
   }
 
   if (error) {
