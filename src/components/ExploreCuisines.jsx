@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const ExploreCuisines = () => {
   return (
@@ -22,11 +24,11 @@ const ExploreCuisines = () => {
           </p>
         </div>
 
-        <button
+        <Link to={'/categories'}
           className="hidden md:block text-sm font-semibold text-orange hover:underline"
         >
           View All →
-        </button>
+        </Link>
 
       </div>
 
@@ -37,8 +39,7 @@ const ExploreCuisines = () => {
         <div className="group relative h-52 overflow-hidden rounded-[28px] cursor-pointer">
 
           <img
-            src="https://images.unsplash.com/photo-1577223220266-f3edaed48f68?q=80"
-            alt="Ethiopian cuisine"
+            src="https://images.unsplash.com/photo-1722239317939-914bd940997d?w=500&auto=format&fit=crop&q=60"
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
           />
 
@@ -46,7 +47,7 @@ const ExploreCuisines = () => {
 
           <div className="absolute bottom-5 left-5 text-white">
             <p className="text-lg font-semibold">
-              Ethiopian
+              American
             </p>
 
             <p className="text-sm text-white/75">

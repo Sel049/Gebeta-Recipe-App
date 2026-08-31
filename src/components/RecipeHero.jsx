@@ -52,15 +52,7 @@ const RecipeHero = ({recipe}) => {
             </div>
           </div>
 
-          <div className="mt-8 flex justify-center ">
-            <button
-              type="button"
-              className="rounded-2xl bg-orange px-7 py-4 font-semibold text-white shadow-lg shadow-orange/20 transition hover:scale-105"
-            >
-              Start Cooking →
-            </button>
-
-          </div>
+          
         </div>
       </div>
     </section>

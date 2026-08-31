@@ -10,7 +10,7 @@ const FeaturedRecipes = ({isHome}) => {
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const apiUrl = isHome?'https://dummyjson.com/recipes?limit=6':'https://dummyjson.com/recipes'
+      const apiUrl = isHome?'https://dummyjson.com/recipes?limit=3':'https://dummyjson.com/recipes'
       try {
         setLoading(true)
         const response = await fetch(apiUrl)
