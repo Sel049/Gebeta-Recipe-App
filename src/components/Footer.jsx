@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
   return (
    
 <footer className="mt-8 border-t border-charcoal/10 pt-8 pb-8">
@@ -108,7 +110,7 @@ const Footer = () => {
   <div className="mt-12 flex flex-col gap-3 border-t border-charcoal/10 pt-6 text-sm text-charcoal/50 md:flex-row md:items-center md:justify-between">
 
     <p>
-      © 2026 Gebeta. Made with ❤️ and React.
+      © {currentYear} Recipe Finder.
     </p>
 
     <p>
