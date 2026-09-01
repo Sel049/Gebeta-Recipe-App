@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -23,8 +24,7 @@ const Footer = () => {
       </div>
 
       <p className="mt-4 max-w-md text-sm leading-6 text-charcoal/60">
-        Discover delicious recipes from Ethiopia and around
-        the world. Find something you love, save it, and
+        Discover delicious recipes from the world. Find something you love, save it, and
         bring everyone to the table.
       </p>
 
@@ -40,33 +40,26 @@ const Footer = () => {
 
       <div className="mt-4 space-y-3 text-sm text-charcoal/60">
 
-        <a
-          href="#"
+        <Link
+          to="/"
           className="block transition hover:text-orange"
         >
           Recipes
-        </a>
+        </Link>
 
-        <a
-          href="#"
+        <Link
+          to="/categories"
           className="block transition hover:text-orange"
         >
           Categories
-        </a>
+        </Link>
 
-        <a
-          href="#"
+        <Link
+          to="/"
           className="block transition hover:text-orange"
         >
           Cuisines
-        </a>
-
-        <a
-          href="#"
-          className="block transition hover:text-orange"
-        >
-          Favorites
-        </a>
+        </Link>
 
       </div>
 
@@ -82,33 +75,27 @@ const Footer = () => {
 
       <div className="mt-4 space-y-3 text-sm text-charcoal/60">
 
-        <a
-          href="#"
+        <Link
+          to="#"
           className="block transition hover:text-orange"
         >
           About
-        </a>
+        </Link>
 
-        <a
-          href="#"
+        <Link
+          to="#"
           className="block transition hover:text-orange"
         >
           Contact
-        </a>
+        </Link>
 
-        <a
-          href="#"
+        <Link
+          to="#"
           className="block transition hover:text-orange"
         >
           GitHub
-        </a>
+        </Link>
 
-        <a
-          href="#"
-          className="block transition hover:text-orange"
-        >
-          Privacy
-        </a>
 
       </div>
 
