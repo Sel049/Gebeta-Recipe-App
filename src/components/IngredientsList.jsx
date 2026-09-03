@@ -15,7 +15,7 @@ const IngredientsList = ({ ingredients = [], initialServings = 1 }) => {
     <div>
       <h2 className="font-display text-3xl font-bold">Ingredients</h2>
 
-      <p className="mt-2 text-gray-500">
+      <p className="mt-2 text-gray-500 dark:text-cream/60">
         Everything you need for this recipe.
       </p>
 
@@ -23,7 +23,7 @@ const IngredientsList = ({ ingredients = [], initialServings = 1 }) => {
         {ingredients.map((ingredient, index) => (
           <label
             key={`${ingredient}-${index}`}
-            className="flex cursor-pointer items-center gap-4 rounded-2xl bg-white p-4 transition hover:shadow-sm"
+            className="flex cursor-pointer items-center gap-4 rounded-2xl bg-white dark:bg-charcoal/40 dark:border dark:border-white/10 p-4 transition hover:shadow-sm dark:text-cream/90"
           >
             <input type="checkbox" className="h-5 w-5 accent-orange" />
 

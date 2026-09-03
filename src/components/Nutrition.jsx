@@ -11,7 +11,7 @@ const Nutrition = ({ nutrition }) => {
   ]
 
   return (
-    <section className="bg-white">
+    <section className="bg-white/60 dark:bg-charcoal/40 border border-white/40 dark:border-white/10 rounded-[32px] shadow-glass">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="font-display text-3xl font-bold">Nutrition</h2>
 
@@ -19,10 +19,10 @@ const Nutrition = ({ nutrition }) => {
           {nutritionItems.map((item) => (
             <div
               key={item.label}
-              className="rounded-2xl bg-cream p-6 text-center"
+              className="rounded-2xl bg-cream dark:bg-charcoal/60 p-6 text-center"
             >
-              <p className="text-sm text-gray-500">{item.label}</p>
-              <p className="mt-1 text-2xl font-bold">{item.value}</p>
+              <p className="text-sm text-gray-500 dark:text-cream/60">{item.label}</p>
+              <p className="mt-1 text-2xl font-bold text-charcoal dark:text-cream">{item.value}</p>
             </div>
           ))}
         </div>

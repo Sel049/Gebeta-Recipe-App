@@ -18,7 +18,7 @@ const HeroSection = () => {
           Explore gourmet dishes, handpicked favorites, and beautifully simple recipes made for every mood.
         </p>
 
-        <div className="mx-auto mt-10 flex max-w-2xl items-center overflow-hidden rounded-full bg-white/95 shadow-lg">
+        <div className="mx-auto mt-10 flex max-w-2xl items-center overflow-hidden rounded-full bg-white/95 dark:bg-charcoal/90 border border-transparent dark:border-white/10 shadow-lg">
           <span className="px-5 text-orange">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -27,7 +27,7 @@ const HeroSection = () => {
           <input
             type="text"
             placeholder="Search recipes, ingredients, cuisines..."
-            className="w-full bg-transparent px-4 py-5 text-sm text-charcoal outline-none placeholder:text-charcoal/50"
+            className="w-full bg-transparent px-4 py-5 text-sm text-charcoal dark:text-cream outline-none placeholder:text-charcoal/50 dark:placeholder:text-cream/50"
           />
           <button className="bg-orange px-8 py-5 text-sm font-semibold text-white">
             Search

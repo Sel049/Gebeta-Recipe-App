@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
    
-<footer className="mt-8 border-t border-charcoal/10 pt-8 pb-8">
+<footer className="mt-8 border-t border-charcoal/10 dark:border-white/10 pt-8 pb-8">
 
   <div className="grid gap-10 md:grid-cols-4">
 
@@ -25,7 +25,7 @@ const Footer = () => {
 
       </div>
 
-      <p className="mt-4 max-w-md text-sm leading-6 text-charcoal/60">
+      <p className="mt-4 max-w-md text-sm leading-6 text-charcoal/60 dark:text-cream/60">
         Discover delicious recipes from the world. Find something you love, save it, and
         bring everyone to the table.
       </p>
@@ -40,7 +40,7 @@ const Footer = () => {
         Explore
       </h3>
 
-      <div className="mt-4 space-y-3 text-sm text-charcoal/60">
+      <div className="mt-4 space-y-3 text-sm text-charcoal/60 dark:text-cream/60">
 
         <Link
           to="/"
@@ -75,7 +75,7 @@ const Footer = () => {
       Recipe Finder
       </h3>
 
-      <div className="mt-4 space-y-3 text-sm text-charcoal/60">
+      <div className="mt-4 space-y-3 text-sm text-charcoal/60 dark:text-cream/60">
 
         <Link
           to="#"
@@ -107,7 +107,7 @@ const Footer = () => {
 
 
   {/* Bottom */}
-  <div className="mt-12 flex flex-col gap-3 border-t border-charcoal/10 pt-6 text-sm text-charcoal/50 md:flex-row md:items-center md:justify-between">
+  <div className="mt-12 flex flex-col gap-3 border-t border-charcoal/10 dark:border-white/10 pt-6 text-sm text-charcoal/50 dark:text-cream/50 md:flex-row md:items-center md:justify-between">
 
     <p>
       © {currentYear} Recipe Finder.

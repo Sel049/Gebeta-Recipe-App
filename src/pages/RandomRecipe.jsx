@@ -46,18 +46,18 @@ const RandomRecipe = () => {
   if (loading) {
     return (
       <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="animate-pulse rounded-[32px] bg-white/60 p-6 shadow-glass">
+        <div className="animate-pulse rounded-[32px] bg-white/60 dark:bg-charcoal/40 border border-transparent dark:border-white/10 p-6 shadow-glass">
           <div className="grid gap-10 lg:grid-cols-2">
-            <div className="h-[520px] rounded-[32px] bg-slate-200" />
+            <div className="h-[520px] rounded-[32px] bg-slate-200 dark:bg-charcoal/60" />
             <div className="space-y-4">
-              <div className="h-8 w-28 rounded-full bg-slate-200" />
-              <div className="h-12 w-3/4 rounded bg-slate-200" />
-              <div className="h-5 w-full rounded bg-slate-200" />
-              <div className="h-5 w-5/6 rounded bg-slate-200" />
+              <div className="h-8 w-28 rounded-full bg-slate-200 dark:bg-charcoal/60" />
+              <div className="h-12 w-3/4 rounded bg-slate-200 dark:bg-charcoal/60" />
+              <div className="h-5 w-full rounded bg-slate-200 dark:bg-charcoal/60" />
+              <div className="h-5 w-5/6 rounded bg-slate-200 dark:bg-charcoal/60" />
               <div className="flex gap-3">
-                <div className="h-14 w-28 rounded-2xl bg-slate-200" />
-                <div className="h-14 w-28 rounded-2xl bg-slate-200" />
-                <div className="h-14 w-28 rounded-2xl bg-slate-200" />
+                <div className="h-14 w-28 rounded-2xl bg-slate-200 dark:bg-charcoal/60" />
+                <div className="h-14 w-28 rounded-2xl bg-slate-200 dark:bg-charcoal/60" />
+                <div className="h-14 w-28 rounded-2xl bg-slate-200 dark:bg-charcoal/60" />
               </div>
             </div>
           </div>
@@ -85,12 +85,12 @@ const RandomRecipe = () => {
   }
 
   return (
-    <div className="min-h-screen bg-cream text-charcoal">
+    <div className="min-h-screen">
       <div className="flex items-center justify-between px-6 pt-6">
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-md transition hover:bg-gray-100"
+          className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-md transition hover:bg-gray-100 dark:bg-charcoal/60 dark:text-cream dark:hover:bg-charcoal/40 dark:border dark:border-white/10"
         >
           <FiArrowLeft />
           <span>Back</span>

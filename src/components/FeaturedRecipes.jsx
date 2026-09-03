@@ -43,15 +43,15 @@ const FeaturedRecipes = ({isHome}) => {
           {[1, 2, 3].map((item) => (
             <div
               key={item}
-              className="animate-pulse overflow-hidden rounded-[28px] border border-white/60 bg-white/55 shadow-glass"
+              className="animate-pulse overflow-hidden rounded-[28px] border border-white/60 dark:border-white/10 bg-white/55 dark:bg-charcoal/40 shadow-glass"
             >
-              <div className="h-64 w-full bg-slate-200" />
+              <div className="h-64 w-full bg-slate-200 dark:bg-charcoal/60" />
               <div className="space-y-3 p-5">
-                <div className="h-4 w-20 rounded-full bg-slate-200" />
-                <div className="h-7 w-2/3 rounded bg-slate-200" />
-                <div className="h-4 w-full rounded bg-slate-200" />
-                <div className="h-4 w-5/6 rounded bg-slate-200" />
-                <div className="h-10 w-full rounded-full bg-slate-200" />
+                <div className="h-4 w-20 rounded-full bg-slate-200 dark:bg-charcoal/60" />
+                <div className="h-7 w-2/3 rounded bg-slate-200 dark:bg-charcoal/60" />
+                <div className="h-4 w-full rounded bg-slate-200 dark:bg-charcoal/60" />
+                <div className="h-4 w-5/6 rounded bg-slate-200 dark:bg-charcoal/60" />
+                <div className="h-10 w-full rounded-full bg-slate-200 dark:bg-charcoal/60" />
               </div>
             </div>
           ))}
@@ -73,7 +73,7 @@ const FeaturedRecipes = ({isHome}) => {
       <div className="mb-6 flex items-center justify-between">
         <h2 className="font-display text-3xl font-bold">Featured Recipes</h2>
         <Link to='/categories'
-        className="rounded-full bg-white/70 px-4 py-2 text-sm font-semibold shadow-glass">
+        className="rounded-full bg-white/70 dark:bg-charcoal/80 px-4 py-2 text-sm font-semibold text-charcoal dark:text-cream border border-transparent dark:border-white/10 shadow-glass hover:scale-105 transition-all duration-200">
           View all
         </Link>
       </div>
