@@ -78,21 +78,21 @@ const Footer = () => {
       <div className="mt-4 space-y-3 text-sm text-charcoal/60 dark:text-cream/60">
 
         <Link
-          to="#"
+          to="https://github.com/Sel049"
           className="block transition hover:text-orange"
         >
           About
         </Link>
 
         <Link
-          to="#"
+          to="https://github.com/Sel049"
           className="block transition hover:text-orange"
         >
           Contact
         </Link>
 
         <Link
-          to="#"
+          to="https://github.com/Sel049"
           className="block transition hover:text-orange"
         >
           GitHub
