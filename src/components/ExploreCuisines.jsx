@@ -18,7 +18,7 @@ const ExploreCuisines = () => {
             Explore Cuisines
           </h2>
 
-          <p className="mt-3 max-w-xl text-charcoal/65">
+          <p className="mt-3 max-w-xl text-charcoal/65 dark:text-cream/65">
             Discover delicious recipes and flavors from different
             cultures around the world.
           </p>

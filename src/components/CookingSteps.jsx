@@ -5,7 +5,7 @@ const CookingSteps = ({ steps= [] }) => {
     <div className="lg:col-span-2">
       <h2 className="font-display text-3xl font-bold">How to Cook</h2>
 
-      <p className="mt-2 text-gray-500">
+      <p className="mt-2 text-gray-500 dark:text-cream/60">
         Follow the steps and bring your dish to life.
       </p>
 
@@ -21,7 +21,7 @@ const CookingSteps = ({ steps= [] }) => {
               Step {index + 1}
               </h3>
 
-              <p className="mt-2 leading-relaxed text-gray-600">
+              <p className="mt-2 leading-relaxed text-gray-600 dark:text-cream/80">
                 {step}
               </p>
             </div>
