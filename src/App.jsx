@@ -10,7 +10,7 @@ const App = () => {
   return (
   <>
   <BrowserRouter>
-    <div className="min-h-screen bg-cream text-charcoal antialiased font-sans">
+    <div className="min-h-screen text-charcoal dark:text-cream/90 antialiased font-sans transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 lg:px-10">  
         <Routes>
           <Route path='/' element={<MainLayout/>}>
