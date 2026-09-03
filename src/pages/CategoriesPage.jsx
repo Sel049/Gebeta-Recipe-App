@@ -63,7 +63,7 @@ const CategoriesPage = () => {
             Explore the world
           </p>
           <h1 className="mt-3 font-display text-5xl font-bold">All Cuisines</h1>
-          <p className="mt-4 max-w-2xl text-lg text-charcoal/70">
+          <p className="mt-4 max-w-2xl text-lg text-charcoal/70 dark:text-cream/70">
             Discover delicious recipes and flavors from different cultures around the world.
           </p>
         </div>
@@ -73,7 +73,7 @@ const CategoriesPage = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <div
                 key={item}
-                className="animate-pulse h-56 rounded-[28px] bg-slate-200"
+                className="animate-pulse h-56 rounded-[28px] bg-slate-200 dark:bg-charcoal/60"
               />
             ))}
           </div>
@@ -119,7 +119,7 @@ const CategoriesPage = () => {
           setSelectedCuisine(null)
           setFilteredRecipes([])
         }}
-        className="mb-8 flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-md transition hover:bg-gray-100"
+        className="mb-8 flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-md transition hover:bg-gray-100 dark:bg-charcoal/60 dark:text-cream dark:hover:bg-charcoal/40 dark:border dark:border-white/10"
       >
         <FiArrowLeft />
         <span>Back to Cuisines</span>
@@ -130,7 +130,7 @@ const CategoriesPage = () => {
           Cuisine
         </p>
         <h1 className="mt-3 font-display text-5xl font-bold">{selectedCuisine} Recipes</h1>
-        <p className="mt-4 text-lg text-charcoal/70">
+        <p className="mt-4 text-lg text-charcoal/70 dark:text-cream/70">
           {filteredRecipes.length} delicious recipes from {selectedCuisine} cuisine
         </p>
       </div>

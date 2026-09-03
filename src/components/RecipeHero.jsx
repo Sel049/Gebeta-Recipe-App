@@ -32,22 +32,22 @@ const RecipeHero = ({recipe}) => {
             {title}
           </h1>
 
-          <p className="mt-5 text-lg leading-relaxed text-gray-600">
+          <p className="mt-5 text-lg leading-relaxed text-gray-600 dark:text-cream/80">
             {description}
           </p>
 
           <div className="mt-7 flex flex-wrap gap-4">
-            <div className="rounded-2xl bg-white px-5 py-3 shadow-sm">
+            <div className="rounded-2xl bg-white dark:bg-charcoal/40 dark:border dark:border-white/10 px-5 py-3 shadow-sm">
               <span className="text-yellow-500">★</span>{' '}
               <span className="font-semibold">{recipe.rating}</span>{' '}
-              <span className="text-sm text-gray-500">rating</span>
+              <span className="text-sm text-gray-500 dark:text-cream/50">rating</span>
             </div>
 
-            <div className="rounded-2xl bg-white px-5 py-3 shadow-sm">
+            <div className="rounded-2xl bg-white dark:bg-charcoal/40 dark:border dark:border-white/10 px-5 py-3 shadow-sm">
               🕒 <span className="font-semibold">{totalTime}</span>
             </div>
 
-            <div className="rounded-2xl bg-white px-5 py-3 shadow-sm">
+            <div className="rounded-2xl bg-white dark:bg-charcoal/40 dark:border dark:border-white/10 px-5 py-3 shadow-sm">
               👨‍🍳 <span className="font-semibold">{recipe.difficulty}</span>
             </div>
           </div>
