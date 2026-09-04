@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import RandomRecipe from './pages/RandomRecipe'
 import RecipeDetails from './pages/RecipeDetails'
 import CategoriesPage from './pages/CategoriesPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
               <Route path='/categories' element={<CategoriesPage/>}/>
               <Route path='/randomrecipe' element = {<RandomRecipe/ >}/>
               <Route path="/recipe/:id" element={<RecipeDetails />}/>
+              <Route path="*" element={<NotFoundPage/>}/>
           </Route>
         </Routes>
       </div>
