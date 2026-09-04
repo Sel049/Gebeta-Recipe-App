@@ -104,27 +104,24 @@ recipe-finder/
 
 ### 🏠 Home Page — Light Mode
 > *The landing page with hero banner, search bar, categories, and featured recipes*
-![Home Page](https://i.imgur.com/PLACEHOLDER_HOME.png)
+![Home Page](screenshots/home-light.png)
 
 ### 🌙 Home Page — Dark Mode
 > *Click the moon icon in the navbar to toggle dark mode*
-![Dark Mode](https://i.imgur.com/PLACEHOLDER_DARK.png)
+![Dark Mode](screenshots/home-dark.png)
 
 ### 🔍 Search Results
 > *Type a recipe name, cuisine, or tag and press Enter to see results*
-![Search](https://i.imgur.com/PLACEHOLDER_SEARCH.png)
+![Search](screenshots/search-results.png)
 
 ### 📂 Categories Page
 > *Browse recipes by cuisine type (Italian, Indian, Mexican, etc.)*
-![Categories](https://i.imgur.com/PLACEHOLDER_CATEGORIES.png)
+![Categories](screenshots/categories.png)
 
 ### 🍽️ Recipe Details
 > *Click any recipe card to view full details*
-![Recipe Details](https://i.imgur.com/PLACEHOLDER_DETAILS.png)
+![Recipe Details](screenshots/recipe-details.png)
 
-### ❌ 404 Page
-> *Automatically shown when visiting a non-existent route*
-![404 Page](https://i.imgur.com/PLACEHOLDER_404.png)
 
 ---
 

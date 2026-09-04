@@ -21,7 +21,7 @@ const HeroSection = ({ searchTerm, onSearchChange }) => {
         </h1>
 
         <p className="mx-auto mt-4 max-w-2xl text-base text-white/85 md:text-lg">
-          Explore gourmet dishes, handpicked favorites, and beautifully simple recipes made for every mood.
+          Explore Delicious Dishes and beautifully simple recipes made for every mood.
         </p>
 
         <div className="mx-auto mt-10 flex max-w-2xl items-center overflow-hidden rounded-full bg-white/95 dark:bg-charcoal/90 border border-transparent dark:border-white/10 shadow-lg">
