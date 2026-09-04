@@ -76,27 +76,12 @@ const Footer = () => {
       </h3>
 
       <div className="mt-4 space-y-3 text-sm text-charcoal/60 dark:text-cream/60">
-
-        <Link
-          to="https://github.com/Sel049"
-          className="block transition hover:text-orange"
-        >
-          About
-        </Link>
-
-        <Link
-          to="https://github.com/Sel049"
-          className="block transition hover:text-orange"
-        >
-          Contact
-        </Link>
-
-        <Link
-          to="https://github.com/Sel049"
+        <a
+          href="https://github.com/Sel049" target='_blank' rel="noopener noreferrer"
           className="block transition hover:text-orange"
         >
           GitHub
-        </Link>
+        </a>
 
 
       </div>
