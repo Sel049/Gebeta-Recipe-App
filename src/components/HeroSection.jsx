@@ -1,6 +1,12 @@
 import React from 'react'
 
-const HeroSection = () => {
+const HeroSection = ({ searchTerm, onSearchChange }) => {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      onSearchChange(searchTerm)
+    }
+  }
+
   return (
     <section className="hero-image relative overflow-hidden rounded-[40px] px-8 py-12 text-white shadow-glass md:px-16 md:py-20">
       <div className="absolute inset-0 bg-gradient-to-r from-orange/30 via-transparent to-mint/20"></div>
@@ -27,9 +33,15 @@ const HeroSection = () => {
           <input
             type="text"
             placeholder="Search recipes, ingredients, cuisines..."
+            value={searchTerm}
+            onChange={(e) => onSearchChange(e.target.value)}
+            onKeyDown={handleKeyDown}
             className="w-full bg-transparent px-4 py-5 text-sm text-charcoal dark:text-cream outline-none placeholder:text-charcoal/50 dark:placeholder:text-cream/50"
           />
-          <button className="bg-orange px-8 py-5 text-sm font-semibold text-white">
+          <button 
+            onClick={() => onSearchChange(searchTerm)}
+            className="bg-orange px-8 py-5 text-sm font-semibold text-white hover:bg-orange/90 transition-colors"
+          >
             Search
           </button>
         </div>

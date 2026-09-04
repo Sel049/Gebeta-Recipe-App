@@ -1,20 +1,29 @@
-import React, {useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import RecipeCard from './RecipeCard'
 import { Link } from 'react-router-dom'
 
 
-
-const FeaturedRecipes = ({isHome}) => {
+const FeaturedRecipes = ({ isHome, searchTerm = '', recipes: recipesProp, loading: loadingProp }) => {
   const [recipes, setRecipes] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [internalLoading, setInternalLoading] = useState(true)
   const [error, setError] = useState('')
 
+  // Determine if parent passed recipes as props (e.g., from CategoriesPage)
+  const hasParentRecipes = recipesProp !== undefined
+  const displayLoading = hasParentRecipes ? loadingProp : internalLoading
+
   useEffect(() => {
+    // If parent already provided recipes, skip internal fetching
+    if (hasParentRecipes) {
+      setRecipes(recipesProp)
+      return
+    }
+
+    // Otherwise fetch from API (always fetch all for search support)
     const fetchRecipes = async () => {
-      const apiUrl = isHome?'https://dummyjson.com/recipes?limit=3':'https://dummyjson.com/recipes'
       try {
-        setLoading(true)
-        const response = await fetch(apiUrl)
+        setInternalLoading(true)
+        const response = await fetch('https://dummyjson.com/recipes')
 
         if (!response.ok) {
           throw new Error('Failed to fetch recipes')
@@ -25,20 +34,35 @@ const FeaturedRecipes = ({isHome}) => {
       } catch (err) {
         setError('Unable to load recipes. Please try again.')
       } finally {
-        setLoading(false)
+        setInternalLoading(false)
       }
     }
 
     fetchRecipes()
-  }, [isHome])
+  }, [hasParentRecipes, recipesProp])
 
-  if (loading) {
+  // Filter recipes based on search term
+  const filteredRecipes = searchTerm
+    ? recipes.filter((recipe) =>
+        recipe.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        recipe.cuisine.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        recipe.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      )
+    : recipes
+
+  // When isHome=true and no search, show only first 3
+  const displayRecipes = isHome && !searchTerm ? filteredRecipes.slice(0, 3) : filteredRecipes
+
+  // Determine heading
+  const heading = searchTerm ? `Search Results for "${searchTerm}"` : 'Featured Recipes'
+
+  if (displayLoading) {
     return (
       <section className="mt-12">
         <div className="mb-6 flex items-center justify-between">
           <h2 className="font-display text-3xl font-bold">Featured Recipes</h2>
         </div>
-  
+   
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {[1, 2, 3].map((item) => (
             <div
@@ -64,22 +88,29 @@ const FeaturedRecipes = ({isHome}) => {
     return <p className="text-center text-lg text-red-500">{error}</p>
   }
 
-  if (!recipes.length) {
-    return <p className="text-center text-lg">No recipes found.</p>
+  if (!displayRecipes.length) {
+    return (
+      <section className="mt-12">
+        <h2 className="font-display text-3xl font-bold mb-6">{heading}</h2>
+        <p className="text-center text-lg">No recipes found{searchTerm ? ` for "${searchTerm}"` : ''}.</p>
+      </section>
+    )
   }
 
   return (
     <section className="mt-12">
       <div className="mb-6 flex items-center justify-between">
-        <h2 className="font-display text-3xl font-bold">Featured Recipes</h2>
-        <Link to='/categories'
-        className="rounded-full bg-white/70 dark:bg-charcoal/80 px-4 py-2 text-sm font-semibold text-charcoal dark:text-cream border border-transparent dark:border-white/10 shadow-glass hover:scale-105 transition-all duration-200">
-          View all
-        </Link>
+        <h2 className="font-display text-3xl font-bold">{heading}</h2>
+        {!searchTerm && isHome && (
+          <Link to='/categories'
+          className="rounded-full bg-white/70 dark:bg-charcoal/80 px-4 py-2 text-sm font-semibold text-charcoal dark:text-cream border border-transparent dark:border-white/10 shadow-glass hover:scale-105 transition-all duration-200">
+            View all
+          </Link>
+        )}
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {recipes.map((recipe) => (
+        {displayRecipes.map((recipe) => (
           <RecipeCard 
             key={recipe.id}
             id={recipe.id}
