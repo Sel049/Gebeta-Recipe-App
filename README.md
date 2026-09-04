@@ -8,20 +8,18 @@
 ![React Router](https://img.shields.io/badge/React_Router-%23CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
----
 
 ## ✨ Features
 
-- 🔍 **Real-Time Recipe Search** — Search recipes by name, cuisine, or tags instantly
-- 🌙 **Dark / Light Mode** — Toggle between themes with a smooth transition
-- 📱 **Fully Responsive** — Beautiful on mobile, tablet, and desktop
-- 🎨 **Glassmorphism UI** — Modern frosted-glass design with custom animations
-- 📂 **Category Browsing** — Explore recipes by popular categories
-- 🎲 **Random Recipe Generator** — Discover something new with one click
-- 🔎 **404 Error Page** — Graceful handling for broken links
-- ♿ **Accessible Navigation** — Clean semantic HTML and keyboard-friendly
+- 🔍 **Recipe Search** — Search recipes by name, cuisine, or tag from the home page
+- 🌙 **Dark / Light Mode** — Switch themes with the navbar toggle; the selected theme is saved locally
+- 📱 **Responsive Design** — Recipe cards and layouts adapt to mobile, tablet, and desktop screens
+- 🎨 **Glassmorphism UI** — Warm food-focused palette with frosted surfaces, gradients, and hover states
+- 🌍 **Cuisine Browsing** — Explore cuisines loaded from the DummyJSON recipe collection
+- 🎲 **Random Recipe** — Discover a randomly selected recipe and request another one
+- 📖 **Recipe Details** — View ingredients, cooking instructions, nutrition, timing, servings, and difficulty
+- 🔎 **404 Page** — Unknown routes are handled by a dedicated not-found page
 
----
 
 ## 🛠️ Tech Stack
 
@@ -34,13 +32,12 @@
 | **DummyJSON API** | Free mock recipe database |
 | **react-icons** | Beautiful icon library |
 
----
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Node.js](https://nodejs.org/) 18 or newer
+- [npm](https://www.npmjs.com/) (included with Node.js)
 
 ### 1. Clone the Repository
 ```bash
@@ -64,66 +61,66 @@ The app will open at **http://localhost:5173** in your browser.
 npm run build
 ```
 
----
 
 ## 📂 Project Structure
 
 ```
-recipe-finder/
-├── public/
-│   └── favicon.svg
+Recipe Finder/
 ├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── HeroSection.jsx      # Search bar & hero banner
-│   │   ├── FeaturedRecipes.jsx  # Recipe card grid (searchable)
-│   │   ├── RecipeCard.jsx       # Individual recipe card
-│   │   ├── Catagories.jsx       # Popular categories grid
-│   │   ├── ExploreCuisines.jsx  # Cuisine showcase section
-│   │   ├── NavBar.jsx           # Navigation + theme toggle
-│   │   └── Footer.jsx           # Site footer with links
+│   ├── components/
+│   │   ├── Catagories.jsx
+│   │   ├── CategoryCard.jsx
+│   │   ├── ChefTip.jsx
+│   │   ├── CookingSteps.jsx
+│   │   ├── ExploreCuisines.jsx
+│   │   ├── FeaturedRecipes.jsx
+│   │   ├── Footer.jsx
+│   │   ├── HeroSection.jsx
+│   │   ├── IngredientsList.jsx
+│   │   ├── NavBar.jsx
+│   │   ├── Nutrition.jsx
+│   │   ├── RecipeCard.jsx
+│   │   ├── RecipeHero.jsx
+│   │   └── RecipeStats.jsx
+│   ├── Layouts/
+│   │   └── MainLayout.jsx
 │   ├── pages/
-│   │   ├── HomePage.jsx         # Main landing page
-│   │   ├── CategoriesPage.jsx   # Browse by cuisine
-│   │   ├── RandomRecipe.jsx     # Random recipe generator
-│   │   ├── RecipeDetails.jsx    # Full recipe view
-│   │   └── NotFoundPage.jsx     # 404 error page
-│   ├── layouts/
-│   │   └── MainLayout.jsx       # Layout wrapper (Nav + Footer)
-│   ├── App.jsx                  # Route definitions
-│   ├── main.jsx                 # Entry point
-│   └── index.css                # Global styles & Tailwind config
+│   │   ├── CategoriesPage.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── NotFoundPage.jsx
+│   │   ├── RandomRecipe.jsx
+│   │   └── RecipeDetails.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── eslint.config.js
+├── index.html
 ├── package.json
-└── README.md
+├── README.md
+└── vite.config.js
 ```
 
----
 
 ## 📸 Screenshots
 
-> **How to Take Screenshots (Windows):** Press `Win + Shift + S` to open the Snipping Tool, select the area, and paste (`Ctrl + V`) into your README.
+Screenshots can be added to a `screenshots/` directory when available.
 
 ### 🏠 Home Page — Light Mode
-> *The landing page with hero banner, search bar, categories, and featured recipes*
 ![Home Page](screenshots/home-light.png)
 
 ### 🌙 Home Page — Dark Mode
-> *Click the moon icon in the navbar to toggle dark mode*
-![Dark Mode](screenshots/home-dark.png)
+ ![Dark Mode](screenshots/home-dark.png)
 
 ### 🔍 Search Results
-> *Type a recipe name, cuisine, or tag and press Enter to see results*
 ![Search](screenshots/search-results.png)
 
 ### 📂 Categories Page
-> *Browse recipes by cuisine type (Italian, Indian, Mexican, etc.)*
 ![Categories](screenshots/categories.png)
 
 ### 🍽️ Recipe Details
-> *Click any recipe card to view full details*
 ![Recipe Details](screenshots/recipe-details.png)
 
 
----
 
 ## 🧭 Routing Guide
 
@@ -135,7 +132,6 @@ recipe-finder/
 | `/recipe/:id` | RecipeDetails | View full recipe by ID |
 | `*` | NotFoundPage | 404 error page |
 
----
 
 ## 🎨 Design Philosophy
 
@@ -150,15 +146,16 @@ recipe-finder/
 | Mint | `#2ec4b6` | Tertiary accent (gradients) |
 
 ### Typography
-- **Playfair Display** — Used for all headings (elegant serif)
-- **Inter** — Used for body text (clean sans-serif)
+
+- **Playfair Display** — Used for headings
+- **Inter** — Used for body text and interface labels
 
 ### Key Effects
-- **Glassmorphism** — Frosted-glass cards with `backdrop-filter: blur()`
-- **Shadow Glass** — Subtle depth: `0 10px 30px rgba(43, 45, 66, 0.12)`
-- **Hover Animations** — `hover:scale-105`, `hover:shadow-lg` on interactive elements
 
----
+- **Glassmorphism** — Frosted surfaces with `backdrop-filter: blur()`
+- **Shadow Glass** — Subtle depth for cards and navigation
+- **Hover States** — Small scale and elevation changes on interactive elements
+
 
 ## 📝 Available Scripts
 
@@ -169,7 +166,6 @@ recipe-finder/
 | `npm run preview` | Preview the production build |
 | `npm run lint` | Run ESLint |
 
----
 
 ## 🤝 Contributing
 
@@ -181,28 +177,22 @@ Contributions are what make the open source community amazing!
 4. **Push** to the branch (`git push origin feature/AmazingFeature`)
 5. **Open** a Pull Request
 
----
 
 ## 📄 License
 
 This project is licensed under the **MIT License**.
 
----
 
 ## 🙏 Acknowledgments
 
-- [DummyJSON](https://dummyjson.com/) — Free mock API for recipe data
-- [Unsplash](https://unsplash.com/) — Category images
-- [Tailwind CSS](https://tailwindcss.com/) — Styling framework
-- [React Icons](https://react-icons.github.io/react-icons/) — Icon library
-- [Feather Icons](https://feathericons.com/) — Arrow icons
+- [DummyJSON](https://dummyjson.com/) for recipe data
+- [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
+- [React Icons](https://react-icons.github.io/react-icons/) for interface icons
 
----
 
 ## 👤 Author
 
 **Selman** — [GitHub Profile](https://github.com/Sel049)
 
----
 
 > 💛 *"The best way to predict the future is to invent it." — Built with passion, one recipe at a time.*
