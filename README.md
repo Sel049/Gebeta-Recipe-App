@@ -106,19 +106,19 @@ Recipe Finder/
 Screenshots can be added to a `screenshots/` directory when available.
 
 ### 🏠 Home Page — Light Mode
-![Home Page](screenshots/home-light.png)
+![Home Page](screenshots/home-light.jpg)
 
 ### 🌙 Home Page — Dark Mode
- ![Dark Mode](screenshots/home-dark.png)
+ ![Dark Mode](screenshots/home-dark.jpg)
 
 ### 🔍 Search Results
-![Search](screenshots/search-results.png)
+![Search](screenshots/search-results.jpg)
 
 ### 📂 Categories Page
-![Categories](screenshots/categories.png)
+![Categories](screenshots/categories.jpg)
 
 ### 🍽️ Recipe Details
-![Recipe Details](screenshots/recipe-details.png)
+![Recipe Details](screenshots/recipe-details.jpg)
 
 
 
