@@ -14,7 +14,7 @@ const ExploreCuisines = () => {
             Explore the world
           </p>
 
-          <h2 className="mt-2 font-display text-4xl font-bold">
+          <h2 className="mt-2 font-display text-3xl font-bold">
             Explore Cuisines
           </h2>
 
@@ -36,7 +36,7 @@ const ExploreCuisines = () => {
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
 
         {/* American */}
-        <div className="group relative h-52 overflow-hidden rounded-[28px] ">
+        <div className="group relative h-52 overflow-hidden rounded-2xl ">
 
           <img
             src="https://images.unsplash.com/photo-1722239317939-914bd940997d?w=500&auto=format&fit=crop&q=60"
@@ -59,7 +59,7 @@ const ExploreCuisines = () => {
 
 
         {/* Italian */}
-        <div className="group relative h-52 overflow-hidden rounded-[28px] ">
+        <div className="group relative h-52 overflow-hidden rounded-2xl ">
 
           <img
             src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=80"
@@ -83,7 +83,7 @@ const ExploreCuisines = () => {
 
 
         {/* Mexican */}
-        <div className="group relative h-52 overflow-hidden rounded-[28px] ">
+        <div className="group relative h-52 overflow-hidden rounded-2xl ">
 
           <img
             src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=700&q=80"
@@ -107,7 +107,7 @@ const ExploreCuisines = () => {
 
 
         {/* Indian */}
-        <div className="group relative h-52 overflow-hidden rounded-[28px] ">
+        <div className="group relative h-52 overflow-hidden rounded-2xl ">
 
           <img
             src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=700&q=80"

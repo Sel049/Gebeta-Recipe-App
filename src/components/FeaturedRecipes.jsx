@@ -67,7 +67,7 @@ const FeaturedRecipes = ({ isHome, searchTerm = '', recipes: recipesProp, loadin
           {[1, 2, 3].map((item) => (
             <div
               key={item}
-              className="animate-pulse overflow-hidden rounded-[28px] border border-white/60 dark:border-white/10 bg-white/55 dark:bg-charcoal/40 shadow-glass"
+              className="animate-pulse overflow-hidden rounded-2xl border border-white/60 dark:border-white/10 bg-white/55 dark:bg-charcoal/40 shadow-glass"
             >
               <div className="h-64 w-full bg-slate-200 dark:bg-charcoal/60" />
               <div className="space-y-3 p-5">

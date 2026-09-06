@@ -12,7 +12,7 @@ const RecipeCard = ({
   difficulty,
 }) => {
   return (
-    <article className="group overflow-hidden rounded-[28px] border border-white/60 dark:border-white/10 bg-white/55 dark:bg-charcoal/40 shadow-glass transition duration-300 hover:-translate-y-2 hover:scale-[1.01]">
+    <article className="group overflow-hidden rounded-2xl border border-white/60 dark:border-white/10 bg-white/55 dark:bg-charcoal/40 shadow-glass transition duration-300 hover:-translate-y-2 hover:scale-[1.01]">
       <div className="relative">
         <img src={image} alt={title} className="h-64 w-full object-cover" />
       </div>

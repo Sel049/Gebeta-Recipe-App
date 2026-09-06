@@ -54,12 +54,12 @@ const Catagories = () => {
         {categories.map((item) => (
           <div
             key={item.label}
-            className="group flex flex-col items-center rounded-[28px] border border-white/60 dark:border-white/10 bg-white/60 dark:bg-charcoal/40 p-4 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-[1.02]"
+            className="flex flex-col items-center rounded-2xl border border-white/60 dark:border-white/10 bg-white/60 dark:bg-charcoal/40 p-4 text-center shadow-glass transition duration-300 hover:-translate-y-1 hover:scale-[1.02]"
           >
             <img
               src={item.image}
               alt={item.label}
-              className="mb-4 h-28 w-full rounded-[22px] object-cover"
+              className="mb-4 h-28 w-full rounded-xl object-cover"
             />
             <span className="text-base font-semibold text-charcoal dark:text-cream">
               {item.label}
