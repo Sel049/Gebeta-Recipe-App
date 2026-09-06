@@ -56,9 +56,9 @@ function NavBar() {
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-white/70 dark:bg-charcoal/80 gap-[5px]"
           >
-            <span className={`block w-5 h-0.5 bg-charcoal dark:bg-cream rounded transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[5px]' : ''}`}></span>
-            <span className={`block w-5 h-0.5 bg-charcoal dark:bg-cream rounded transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`block w-5 h-0.5 bg-charcoal dark:bg-cream rounded transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[5px]' : ''}`}></span>
+            <span className={`block w-4 h-0.5 bg-charcoal dark:bg-cream rounded transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[6px]' : ''}`}></span>
+            <span className={`block w-4 h-0.5 bg-charcoal dark:bg-cream rounded transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-4 h-0.5 bg-charcoal dark:bg-cream rounded transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[6px]' : ''}`}></span>
           </button>
         </div>
       </header>
